@@ -1,0 +1,103 @@
+#txt1{
+    background-color:  #a8af4c58;
+    color: var(--color-btn1-base2);
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size:250%;
+border:none;
+border-radius: 10px;
+
+
+}
+#body{
+    background-color: #a8af4c58;
+    
+}
+:root{
+    --color-btn1-base :#a8af4ccc;
+    --color-btn1-base2 : white;
+}
+#btn{
+   
+    padding: 10px 20px;
+    background-color: var(--color-btn1-base);
+    color: var(--color-btn1-base2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+#btn:hover{
+    background-color:var(--color-btn1-base2);
+    color: var(--color-btn1-base);
+  
+}
+#img{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    scale: (0.5,0.5);
+}
+#carta{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    animation-name: movimiento;
+    animation: movimiento 3s ease-in-out infinite;
+    animation-fill-mode:forwards ;
+    animation-play-state: running;
+}
+
+@keyframes movimiento{
+    0% {transform:rotate(0deg)}
+    33% {transform:rotate(15deg)}
+    66% {transform:rotate(-15deg)}
+    100%{transform:rotate(0deg)}
+   
+}
+#imagen1{
+   
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: desplazamiento;
+    animation: desplazamiento 3s ;
+    animation-fill-mode: forwards;
+   
+}
+@keyframes desplazamiento{
+    100%{transform:translate(-50%,-70%)}
+}
+#ImagenASuperponer{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#btnlink{
+    display: none;
+    font-size: larger;
+    padding: 10px 20px;
+    background-color: rgb(244, 227,215);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, 30%);
+   scale:(2,2);
+   animation-name: desplazamientobtn;
+   animation: desplazamientobtn 3s ;
+   animation-fill-mode: forwards;
+}
+@keyframes desplazamientobtn{
+    100%{transform:translate(-50%,-350%)}
+}

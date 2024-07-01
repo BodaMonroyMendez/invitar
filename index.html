@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\estilos.CSS">
+</head>
+<style>
+  
+ #map_content {
+    display: flex;
+            flex-direction: column;
+            margin: 0 auto; /* Centra horizontalmente el contenido */
+            position: absolute; /* Cambia a "relative" si prefieres posicionarlo con respecto al flujo normal */
+            left: 50%; /* Centra horizontalmente */
+            top: 40%; /* Centra verticalmente */
+            transform: translate(-50%, -50%); /* Ajusta para centrar completamente */
+            z-index: 3;
+        }
+     
+        
+        
+        #imagen1 {
+            display: none;
+            flex-direction: column;
+            margin: 0 auto; /* Centra horizontalmente el contenido */
+            position: absolute; /* Cambia a "relative" si prefieres posicionarlo con respecto al flujo normal */
+            left: 50%; /* Centra horizontalmente */
+            top: 40%; /* Centra verticalmente */
+            transform: translate(-50%, -50%); /* Ajusta para centrar completamente */
+            z-index: 1;
+
+        }
+        #ImagenASuperponer {
+            display: none;
+            flex-direction: column;
+            margin: 0 auto; /* Centra horizontalmente el contenido */
+            position: absolute; /* Cambia a "relative" si prefieres posicionarlo con respecto al flujo normal */
+            left: 50%; /* Centra horizontalmente */
+            top: 40%; /* Centra verticalmente */
+            transform: translate(-50%, -50%); /* Ajusta para centrar completamente */
+            z-index: 2;
+        }
+        #btn{
+            z-index: 4;
+            display: flex;
+        }
+        #btnlink{
+            z-index: 4;
+            display: none;
+            position: absolute; /* Cambia a "relative" si prefieres posicionarlo con respecto al flujo normal */
+            left: 50%; /* Centra horizontalmente */
+            top: 40%; /* Centra verticalmente */
+            transform: translate(-50%, -105%); /* Ajusta para centrar completamente */
+        }
+        #txt1{
+            z-index: 4;
+        }
+      
+</style>
+<script>
+    function toggleContent() {
+        var carta = document.getElementById("carta");
+        var img = document.getElementById("ImagenASuperponer");
+        var hoja = document.getElementById("imagen1")
+        var txt1 = document.getElementById("txt1");
+        var btn = document.getElementById("btn");
+        var btnlink = document.getElementById("btnlink");
+        
+    
+    
+    if (carta.style.display === "block") {
+        carta.style.display = "none";
+        img.style.display = "block"; 
+        hoja.style.display = "block"; 
+        btn.style.display = "none";
+        btnlink.style.display = "none";
+    } 
+    else {
+        carta.style.display = "none";
+        img.style.display = "block";
+        txt1.style.display = "none";
+        hoja.style.display = "block"; 
+        btn.style.display = "none";
+        btnlink.style.display = "block";
+    }
+
+            }
+</script>
+<body>
+   
+    <div id="map_content">
+        <img id="carta" src="C:\Users\juanm\OneDrive\Desktop\Nueva carpeta\imgenes\dibujo.2.svg" alt="Descripción de la imagen">
+    </div>
+  
+   
+    <img src="imgenes/hoja.svg" alt="Imagen base" id="imagen1">
+    <img src="imgenes/mediacarta.svg" alt="Imagen a superponer" id="ImagenASuperponer">
+
+   
+<div id = "txt1"> <p><b>Tienes Un mensaje</b></p> </div> 
+
+
+<button id="btn", onclick="toggleContent()">
+    
+    <div> <h1><b> Doble click para abrir mensaje</b></h1> </div> </button>
+    <a id="btnlink", href="https://www.youtube.com/watch?v=gjvTQTGogUM&list=RDNKVI1zbtLHY&index=2" target="_blank"><b>Invitación Nuetra Boda</b></a>
+</body>
+</html>
